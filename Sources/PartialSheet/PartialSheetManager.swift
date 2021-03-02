@@ -34,6 +34,9 @@ public class PartialSheetManager: ObservableObject {
             }
         }
     }
+    
+    // Should add Drag gesture to the bottom sheet - fixes an issue with iOS 13 Slider
+    @Published public var isDragEnable: Bool = true
     /// The content of the sheet
     @Published private(set) var content: AnyView
     /// the onDismiss code runned when the partial sheet is closed
